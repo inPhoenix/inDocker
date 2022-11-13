@@ -52,4 +52,6 @@ docker run -p 8080:5000 -d <IMAGE ID>
 # Creating a build in hub.docker
 ```shell
 docker login -u user
+docker images
+docker push inphoenix/app-node:1.0
 ```
