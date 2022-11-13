@@ -54,4 +54,5 @@ docker run -p 8080:5000 -d <IMAGE ID>
 docker login -u user
 docker images
 docker push inphoenix/app-node:1.0
+docker push inphoenix/app-node:1.1 # If you generate a new version
 ```
