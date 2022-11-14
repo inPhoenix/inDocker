@@ -56,3 +56,14 @@ docker images
 docker push inphoenix/app-node:1.0
 docker push inphoenix/app-node:1.1 # If you generate a new version
 ```
+
+# Mapping Volumes 
+```shell
+# this command will create an folder named app on the container which will reflect on your local
+docker run –it –v /Users/phoenix/volume-docker:/app Ubuntu bash.
+
+# Another way is to create volumes
+docker run –it --mount type=bind,source=/Users/phoenix/volume-docker,target=/app ubuntu bash.
+#another example
+docker run –mount type=bind,source=/home/diretorio,target=/app nginx
+```

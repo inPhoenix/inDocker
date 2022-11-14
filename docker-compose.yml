@@ -1,0 +1,14 @@
+version: "3.00"
+services:
+  node:
+    image: inphoenix/app-node:1.1
+    container_name: inphoenix
+    networks:
+      - compose-bridge
+    ports:
+      - 5000:5000
+
+networks:
+  compose-bridge:
+    driver: bridge
+
