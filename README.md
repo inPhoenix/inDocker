@@ -35,7 +35,7 @@ docker run -p 8080:80 # 8080 is the local and 80 is the one that container maps
 docker port <ID> # list the port mapping
 ```
 
-# Docker Build
+### Docker Build
 
 ```shell
 docker build -t <user>/app-node:1.0 . # user is lowercase
@@ -49,7 +49,8 @@ docker run -p 8080:5000 -d <IMAGE ID>
 
 ```
 
-# Creating a build in hub.docker
+### Creating a build in hub.docker
+
 ```shell
 docker login -u user
 docker images
@@ -57,7 +58,7 @@ docker push inphoenix/app-node:1.0
 docker push inphoenix/app-node:1.1 # If you generate a new version
 ```
 
-# Mapping Volumes 
+### Mapping Volumes 
 ```shell
 # this command will create an folder named app on the container which will reflect on your local
 docker run –it –v /Users/phoenix/volume-docker:/app Ubuntu bash.
@@ -66,4 +67,26 @@ docker run –it –v /Users/phoenix/volume-docker:/app Ubuntu bash.
 docker run –it --mount type=bind,source=/Users/phoenix/volume-docker,target=/app ubuntu bash.
 #another example
 docker run –mount type=bind,source=/home/diretorio,target=/app nginx
+```
+
+
+### Docker compose
+
+#### Basic config:
+
+```shell
+version: '3' - version of the docker-compose
+services:
+  redis-server:
+    image: 'redis'
+	node-app:
+	  build: . // use the dockerfile to build the image
+	  ports:
+	    - "4001:8081" // tip: - in yaml is an array
+
+```
+
+#### rebuild
+```
+docker-compose up --build
 ```

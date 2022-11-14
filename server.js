@@ -9,6 +9,6 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port,() => {
-    console.log('server started')
+    console.log('Server 1 started')
 })
 
