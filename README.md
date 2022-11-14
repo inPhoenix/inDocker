@@ -90,3 +90,10 @@ services:
 ```
 docker-compose up --build
 ```
+
+#### start/stop
+
+```
+docker-compose up -d
+docker-compose down
+```
