@@ -5,7 +5,8 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
     # Learning Docker
-
+command to get inside the alpine
+docker exec -it 40d62338ffe8 /bin/sh
 
 ### Basic commands
 ```shell
